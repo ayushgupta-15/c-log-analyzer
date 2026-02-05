@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a bug or regression
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide minimal steps or sample log lines.
+      placeholder: |
+        1. Run `./loganalyzer logs/sample.log`
+        2. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS and compiler version.
+      placeholder: |
+        OS: Ubuntu 22.04
+        Compiler: gcc 12.x
