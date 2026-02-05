@@ -85,6 +85,46 @@ Show version information
 ./loganalyzer server.log --group-by hour --output json
 ```
 
+## Sample Output
+Text output:
+```text
+$ ./loganalyzer logs/sample.log
+Analyzing log file: logs/sample.log
+Press Ctrl+C to abort...
+
+Processed 36 lines... Done!
+
+Log Summary
+------------------
+Total lines : 36
+INFO  : 19
+WARN  : 5
+ERROR : 12
+
+Top 2 Errors:
+------------------
+1. Timeout while reading request (7 occurrences)
+2. Database connection failed (5 occurrences)
+```
+
+JSON output:
+```json
+{"summary":{"total_lines":36,"info":19,"warn":5,"error":12},"top_errors":[{"message":"Timeout while reading request","count":7},{"message":"Database connection failed","count":5}]}
+```
+
+CSV output:
+```csv
+metric,value
+total_lines,36
+info,19
+warn,5
+error,12
+
+error_message,count
+"Timeout while reading request",7
+"Database connection failed",5
+```
+
 ## Log Format
 
 Each log entry must follow this structure:
