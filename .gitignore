@@ -29,6 +29,7 @@ Thumbs.db
 # Logs / outputs
 *.log
 logs/*.log
+!logs/sample.log
 
 # Misc
 compile_commands.json
