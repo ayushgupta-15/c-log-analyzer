@@ -1,0 +1,32 @@
+# Build artifacts
+*.o
+*.a
+*.so
+*.out
+*.exe
+
+# Binaries
+loganalyzer
+
+# Debug / profiling
+*.dSYM/
+*.prof
+*.gcda
+*.gcno
+*.gcov
+
+# Editor / OS
+*.swp
+*.swo
+*.swn
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Logs / outputs
+*.log
+logs/*.log
+
+# Misc
+compile_commands.json
